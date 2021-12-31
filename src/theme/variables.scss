@@ -1,6 +1,8 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -74,6 +76,105 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** EU Custom Colors **/
+  --ion-color-eublue: #2F4396;
+	--ion-color-eublue-rgb: 47,67,150;
+	--ion-color-eublue-contrast: #ffffff;
+	--ion-color-eublue-contrast-rgb: 255,255,255;
+	--ion-color-eublue-shade: #293b84;
+	--ion-color-eublue-tint: #4456a1;
+
+  --ion-color-eured: #E01819;
+	--ion-color-eured-rgb: 224,24,25;
+	--ion-color-eured-contrast: #ffffff;
+	--ion-color-eured-contrast-rgb: 255,255,255;
+	--ion-color-eured-shade: #c51516;
+	--ion-color-eured-tint: #e32f30;
+
+  --ion-color-euyellow: #EDE300;
+	--ion-color-euyellow-rgb: 237,227,0;
+	--ion-color-euyellow-contrast: #000000;
+	--ion-color-euyellow-contrast-rgb: 0,0,0;
+	--ion-color-euyellow-shade: #d1c800;
+	--ion-color-euyellow-tint: #efe61a;
+
+  --ion-color-euwhite: #FDFDFD;
+	--ion-color-euwhite-rgb: 253,253,253;
+	--ion-color-euwhite-contrast: #000000;
+	--ion-color-euwhite-contrast-rgb: 0,0,0;
+	--ion-color-euwhite-shade: #dfdfdf;
+	--ion-color-euwhite-tint: #fdfdfd;
+
+  --ion-color-eupurple: #A0509A;
+	--ion-color-eupurple-rgb: 160,80,154;
+	--ion-color-eupurple-contrast: #ffffff;
+	--ion-color-eupurple-contrast-rgb: 255,255,255;
+	--ion-color-eupurple-shade: #8d4688;
+	--ion-color-eupurple-tint: #aa62a4;
+
+  --ion-color-eugreen: #21B19B;
+	--ion-color-eugreen-rgb: 33,177,155;
+	--ion-color-eugreen-contrast: #000000;
+	--ion-color-eugreen-contrast-rgb: 0,0,0;
+	--ion-color-eugreen-shade: #1d9c88;
+	--ion-color-eugreen-tint: #37b9a5;
+
+}
+
+/** Custom Color Variables **/
+.ion-color-eublue {
+	--ion-color-base: var(--ion-color-eublue);
+	--ion-color-base-rgb: var(--ion-color-eublue-rgb);
+	--ion-color-contrast: var(--ion-color-eublue-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-eublue-contrast-rgb);
+	--ion-color-shade: var(--ion-color-eublue-shade);
+	--ion-color-tint: var(--ion-color-eublue-tint);
+}
+
+.ion-color-eured {
+	--ion-color-base: var(--ion-color-eured);
+	--ion-color-base-rgb: var(--ion-color-eured-rgb);
+	--ion-color-contrast: var(--ion-color-eured-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-eured-contrast-rgb);
+	--ion-color-shade: var(--ion-color-eured-shade);
+	--ion-color-tint: var(--ion-color-eured-tint);
+}
+
+.ion-color-euyellow {
+	--ion-color-base: var(--ion-color-euyellow);
+	--ion-color-base-rgb: var(--ion-color-euyellow-rgb);
+	--ion-color-contrast: var(--ion-color-euyellow-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-euyellow-contrast-rgb);
+	--ion-color-shade: var(--ion-color-euyellow-shade);
+	--ion-color-tint: var(--ion-color-euyellow-tint);
+}
+
+.ion-color-euwhite {
+	--ion-color-base: var(--ion-color-euwhite);
+	--ion-color-base-rgb: var(--ion-color-euwhite-rgb);
+	--ion-color-contrast: var(--ion-color-euwhite-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-euwhite-contrast-rgb);
+	--ion-color-shade: var(--ion-color-euwhite-shade);
+	--ion-color-tint: var(--ion-color-euwhite-tint);
+}
+
+.ion-color-eupurple {
+	--ion-color-base: var(--ion-color-eupurple);
+	--ion-color-base-rgb: var(--ion-color-eupurple-rgb);
+	--ion-color-contrast: var(--ion-color-eupurple-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-eupurple-contrast-rgb);
+	--ion-color-shade: var(--ion-color-eupurple-shade);
+	--ion-color-tint: var(--ion-color-eupurple-tint);
+}
+
+.ion-color-eugreen {
+	--ion-color-base: var(--ion-color-eugreen);
+	--ion-color-base-rgb: var(--ion-color-eugreen-rgb);
+	--ion-color-contrast: var(--ion-color-eugreen-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-eugreen-contrast-rgb);
+	--ion-color-shade: var(--ion-color-eugreen-shade);
+	--ion-color-tint: var(--ion-color-eugreen-tint);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -145,6 +246,7 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
   }
 
   /*

@@ -1,9 +1,41 @@
-<ion-content color="medium" class="ion-padding">
+<ion-content color="dark">
   <ion-list>
-    <app-bot-card></app-bot-card>
-    <app-bot-card></app-bot-card>
-    <app-bot-card></app-bot-card>
-    <app-bot-card></app-bot-card>
-    <app-bot-card></app-bot-card>
+    <ion-chip>
+      <ion-label>Age IV</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label>Round 1</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label>Papal: Castile</ion-label>
+    </ion-chip>
+    <ion-chip class="quantity-chip">
+      <ion-icon name="remove-circle-outline"></ion-icon>
+      <ion-label>3</ion-label>
+      <ion-icon src="assets/svg/IA.svg"></ion-icon>
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-chip>
+    <ion-chip>
+      <ion-label>Last Turn</ion-label>
+      <ion-icon src="assets/svg/true.svg"></ion-icon>
+    </ion-chip>
+    <ion-chip>
+      <ion-label>Action Phase End</ion-label>
+      <ion-icon src="assets/svg/false.svg"></ion-icon>
+    </ion-chip>
+    <ion-chip>
+      <ion-label>Very Hard</ion-label>
+      <ion-icon src="assets/svg/BP.svg"></ion-icon>
+    </ion-chip>
+    <ion-chip>
+      <ion-label>0 Players Passed</ion-label>
+    </ion-chip>
   </ion-list>
+  <ion-accordion-group>
+    <app-bot-card></app-bot-card>
+    <app-bot-card></app-bot-card>
+    <app-bot-card></app-bot-card>
+    <app-bot-card></app-bot-card>
+    <app-bot-card></app-bot-card>
+  </ion-accordion-group>
 </ion-content>
