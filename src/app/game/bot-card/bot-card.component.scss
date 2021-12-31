@@ -1,0 +1,16 @@
+ion-card {
+    box-sizing: border-box;
+    // min-width: 308px;
+    text-align: center;
+    ion-grid {
+        padding: 0;
+    }
+}
+
+.quantity-chip {
+    pointer-events: none;
+    ion-icon:first-child, ion-icon:last-child {
+        pointer-events: all;
+        cursor: pointer;
+    }
+}

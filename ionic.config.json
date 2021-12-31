@@ -1,0 +1,7 @@
+{
+  "name": "EUPOP-Bot-Companion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
