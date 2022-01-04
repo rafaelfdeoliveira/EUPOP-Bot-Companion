@@ -1,22 +1,16 @@
 ion-list {
     background-color: var(--ion-color-medium);
+    padding: 0;
 }
 
 ion-chip {
     background-color: var(--ion-color-eublue-shade);
     color: var(--ion-color-eublue-contrast);
     width: 50%;
-    margin: 4px 0 4px 0;
+    margin: 4px 0;
     justify-content: center;
 }
 
-.quantity-chip {
-    pointer-events: none;
-    ion-icon:first-child, ion-icon:last-child {
-        pointer-events: all;
-        cursor: pointer;
-    }
-    ion-icon:not(:first-child):not(:last-child) {
-        margin: 0 8px 0 8px;
-    }
+.horizontal-margin {
+    margin: 0 8px;
 }

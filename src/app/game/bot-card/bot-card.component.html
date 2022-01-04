@@ -4,87 +4,97 @@
     <ion-label>Nation Name</ion-label>
   </ion-item>
   <ion-list slot="content">
-    <ion-chip class="quantity-chip">
-      <ion-icon name="remove-circle-outline"></ion-icon>
+    <app-counter-chip [color]="color" (change)="changeBPLeft($event)">
       <ion-label>8</ion-label>
-      <ion-icon src="assets/svg/BP.svg"></ion-icon>
+      <ion-icon class="horizontal-margin" src="assets/svg/BP.svg"></ion-icon>
       <ion-label>left</ion-label>
-      <ion-icon name="add-circle-outline"></ion-icon>
-    </ion-chip>
-    <ion-chip class="quantity-chip">
-      <ion-icon name="remove-circle-outline"></ion-icon>
+    </app-counter-chip>
+    <app-counter-chip [color]="color" (change)="changeBPspent($event)">
       <ion-label>15</ion-label>
-      <ion-icon src="assets/svg/BP.svg"></ion-icon>
+      <ion-icon class="horizontal-margin" src="assets/svg/BP.svg"></ion-icon>
       <ion-label>spent</ion-label>
-      <ion-icon name="add-circle-outline"></ion-icon>
-    </ion-chip>
-    <ion-chip>
+    </app-counter-chip>
+    <app-counter-chip [color]="color" (change)="changeInfluence($event)">
+      <ion-label>12 Influence</ion-label>
+    </app-counter-chip>
+    <app-counter-chip [color]="color" (change)="changeCardinals($event)">
+      <ion-label>3 Cardinals</ion-label>
+    </app-counter-chip>
+    <app-bool-chip [color]="color">
       <ion-label>Available</ion-label>
       <ion-icon src="assets/svg/manpower.svg"></ion-icon>
-      <ion-icon src="assets/svg/true.svg"></ion-icon>
-    </ion-chip>
-    <ion-chip>
+    </app-bool-chip>
+    <ion-chip id="focus">
       <ion-label>Focus</ion-label>
       <ion-icon src="assets/svg/coin.svg"></ion-icon>
     </ion-chip>
-    <ion-chip>
+    <ion-popover trigger="focus" size="cover">
+      <ng-template>
+        <ion-list class="ion-no-padding">
+          <ion-item button color="danger">
+            <ion-label>None</ion-label>
+            <ion-icon src="assets/svg/false.svg"></ion-icon>
+          </ion-item>
+          <ion-item button color="euyellow">
+            <ion-label>Economic</ion-label>
+            <ion-icon src="assets/svg/coin.svg"></ion-icon>
+          </ion-item>
+          <ion-item button color="eugreen">
+            <ion-label>Administrative</ion-label>
+            <ion-icon src="assets/svg/AP.svg"></ion-icon>
+          </ion-item>
+          <ion-item button color="eublue">
+            <ion-label>Diplomatic</ion-label>
+            <ion-icon src="assets/svg/DP.svg"></ion-icon>
+          </ion-item>
+          <ion-item button color="eured">
+            <ion-label>Military</ion-label>
+            <ion-icon src="assets/svg/MP.svg"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </ng-template>
+    </ion-popover>
+    <app-bool-chip [color]="color">
       <ion-label>Enemy Inside</ion-label>
-      <ion-icon src="assets/svg/false.svg"></ion-icon>
-    </ion-chip>
-    <ion-chip>
+    </app-bool-chip>
+    <app-bool-chip [color]="color">
       <ion-label>Occupied</ion-label>
-      <ion-icon src="assets/svg/true.svg"></ion-icon>
-    </ion-chip>
-    <ion-chip>
+    </app-bool-chip>
+    <app-bool-chip [color]="color">
       <ion-label>War</ion-label>
-      <ion-icon src="assets/svg/true.svg"></ion-icon>
-    </ion-chip>
-    <ion-chip>
+    </app-bool-chip>
+    <app-bool-chip [color]="color">
       <ion-label>Sieging</ion-label>
-      <ion-icon src="assets/svg/false.svg"></ion-icon>
-    </ion-chip>
-    <ion-chip>
+    </app-bool-chip>
+    <app-bool-chip [color]="color">
       <ion-label>Event</ion-label>
-      <ion-icon src="assets/svg/true.svg"></ion-icon>
-    </ion-chip>
-    <ion-chip>
+    </app-bool-chip>
+    <app-bool-chip [color]="color">
       <ion-label>Passed</ion-label>
-      <ion-icon src="assets/svg/false.svg"></ion-icon>
-    </ion-chip>
-    <ion-chip class="quantity-chip">
-      <ion-icon name="remove-circle-outline"></ion-icon>
+    </app-bool-chip>
+    <app-counter-chip [color]="color" (change)="changeAdminIdeas($event)">
       <ion-label>2</ion-label>
-      <ion-icon src="assets/svg/AP.svg"></ion-icon>
+      <ion-icon class="horizontal-margin" src="assets/svg/AP.svg"></ion-icon>
       <ion-label>Ideas</ion-label>
-      <ion-icon name="add-circle-outline"></ion-icon>
-    </ion-chip>
-    <ion-chip class="quantity-chip">
-      <ion-icon name="remove-circle-outline"></ion-icon>
+    </app-counter-chip>
+    <app-counter-chip [color]="color" (change)="changeDiploIdeas($event)">
       <ion-label>0</ion-label>
-      <ion-icon src="assets/svg/DP.svg"></ion-icon>
+      <ion-icon class="horizontal-margin" src="assets/svg/DP.svg"></ion-icon>
       <ion-label>Ideas</ion-label>
-      <ion-icon name="add-circle-outline"></ion-icon>
-    </ion-chip>
-    <ion-chip class="quantity-chip">
-      <ion-icon name="remove-circle-outline"></ion-icon>
+    </app-counter-chip>
+    <app-counter-chip [color]="color" (change)="changeMilIdeas($event)">
       <ion-label>1</ion-label>
-      <ion-icon src="assets/svg/MP.svg"></ion-icon>
+      <ion-icon class="horizontal-margin" src="assets/svg/MP.svg"></ion-icon>
       <ion-label>Ideas</ion-label>
-      <ion-icon name="add-circle-outline"></ion-icon>
-    </ion-chip>
-    <ion-chip>
+    </app-counter-chip>
+    <app-bool-chip [color]="color">
       <ion-label>QFTNW</ion-label>
-      <ion-icon src="assets/svg/true.svg"></ion-icon>
-    </ion-chip>
-    <ion-chip class="quantity-chip">
-      <ion-icon name="remove-circle-outline"></ion-icon>
+    </app-bool-chip>
+    <app-counter-chip [color]="color" (change)="changeColonists($event)">
       <ion-label>0 Colonists</ion-label>
-      <ion-icon name="add-circle-outline"></ion-icon>
-    </ion-chip>
-    <ion-chip class="quantity-chip">
-      <ion-icon name="remove-circle-outline"></ion-icon>
+    </app-counter-chip>
+    <app-counter-chip [color]="color" (change)="changeColonialClaims($event)">
       <ion-label>0 Col. Claims</ion-label>
-      <ion-icon name="add-circle-outline"></ion-icon>
-    </ion-chip>
+    </app-counter-chip>
   </ion-list>
 </ion-accordion>
