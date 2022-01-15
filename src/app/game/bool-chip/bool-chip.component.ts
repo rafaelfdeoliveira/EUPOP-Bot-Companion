@@ -1,28 +1,29 @@
-import { Component, ViewChild, ElementRef, Input, AfterViewInit, OnChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-bool-chip',
   templateUrl: './bool-chip.component.html',
   styleUrls: ['./bool-chip.component.scss'],
 })
-export class BoolChipComponent implements AfterViewInit, OnChanges {
+export class BoolChipComponent {
 
-  @ViewChild('chip', {read: ElementRef}) chip: ElementRef
-  @ViewChild('icon', {read: ElementRef}) icon: ElementRef
-  @Input() color = 'primary'
+  @Input() color = 'tertiary'
   @Input() bool = true
+  @Output() boolChange = new EventEmitter<boolean>()
 
-  ngAfterViewInit() {
-      this.setElementColor()
+  emitBoolChange() {
+    if (this.bool) this.boolChange.emit(false)
+    else this.boolChange.emit(true)
   }
 
-  ngOnChanges() {
-      if (this.chip) this.setElementColor()
+  getBackgroundColor() {
+    return this.bool ? `var(--ion-color-${this.color}-shade)` : `var(--ion-color-${this.color}-tint)`
   }
 
-  setElementColor() {
-    this.chip.nativeElement.style.backgroundColor = this.bool ? `var(--ion-color-${this.color}-shade)` : `var(--ion-color-${this.color}-tint)`
-    this.chip.nativeElement.style.color = `var(--ion-color-${this.color}-contrast)`
+  getChipStyle() {
+    return `{'backgroundColor': getBackgroundColor(), 'color': 'var(--ion-color-${this.color}-contrast)'}`
   }
+
+  // [style.backgroundColor]="getBackgroundColor()" style.color="var(--ion-color-{{color}}-contrast)"
 
 }

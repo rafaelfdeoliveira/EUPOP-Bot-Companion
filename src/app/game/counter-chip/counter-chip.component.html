@@ -1,4 +1,4 @@
-<ion-chip #chip (click)="emitChange($event)">
+<ion-chip (click)="emitChange($event)" style.backgroundColor="var(--ion-color-{{color}}-shade)" style.color="var(--ion-color-{{color}}-contrast)">
   <ion-icon name="remove-circle-outline"></ion-icon>
   <ng-content></ng-content>
   <ion-icon name="add-circle-outline"></ion-icon>

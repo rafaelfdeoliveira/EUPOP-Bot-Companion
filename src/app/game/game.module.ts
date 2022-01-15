@@ -8,6 +8,7 @@ import { GamePage } from './game.page';
 import { BotCardComponent } from './bot-card/bot-card.component';
 import { CounterChipComponent } from './counter-chip/counter-chip.component';
 import { BoolChipComponent } from './bool-chip/bool-chip.component';
+import { FocusChipComponent } from './focus-chip/focus-chip.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { BoolChipComponent } from './bool-chip/bool-chip.component';
     GamePage,
     BotCardComponent,
     CounterChipComponent,
-    BoolChipComponent
+    BoolChipComponent,
+    FocusChipComponent
   ]
 })
 export class GamePageModule {}

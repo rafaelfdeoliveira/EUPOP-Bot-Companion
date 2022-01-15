@@ -1,6 +1,20 @@
 <ion-accordion>
   <ion-item color="eublue" slot="header">
-    <ion-icon class="ion-margin-end" src="assets/svg/blueShield.svg"></ion-icon>
+    <ion-icon id="shield" class="ion-margin-end" src="assets/svg/blueShield.svg"></ion-icon>
+    <ion-popover trigger="shield">
+      <ng-template>
+        <ion-list class="ion-no-padding">
+          <ion-item button color="eublue">
+            <ion-label>Blue</ion-label>
+            <ion-icon src="assets/svg/blueShield.svg"></ion-icon>
+          </ion-item>
+          <ion-item button color="euyellow">
+            <ion-label>Yellow</ion-label>
+            <ion-icon src="assets/svg/yellowShield.svg"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </ng-template>
+    </ion-popover>
     <ion-label>Nation Name</ion-label>
   </ion-item>
   <ion-list slot="content">
@@ -20,40 +34,11 @@
     <app-counter-chip [color]="color" (change)="changeCardinals($event)">
       <ion-label>3 Cardinals</ion-label>
     </app-counter-chip>
-    <app-bool-chip [color]="color">
+    <app-bool-chip [color]="color" [(bool)]="availableManpower">
       <ion-label>Available</ion-label>
       <ion-icon src="assets/svg/manpower.svg"></ion-icon>
     </app-bool-chip>
-    <ion-chip id="focus">
-      <ion-label>Focus</ion-label>
-      <ion-icon src="assets/svg/coin.svg"></ion-icon>
-    </ion-chip>
-    <ion-popover trigger="focus" size="cover">
-      <ng-template>
-        <ion-list class="ion-no-padding">
-          <ion-item button color="danger">
-            <ion-label>None</ion-label>
-            <ion-icon src="assets/svg/false.svg"></ion-icon>
-          </ion-item>
-          <ion-item button color="euyellow">
-            <ion-label>Economic</ion-label>
-            <ion-icon src="assets/svg/coin.svg"></ion-icon>
-          </ion-item>
-          <ion-item button color="eugreen">
-            <ion-label>Administrative</ion-label>
-            <ion-icon src="assets/svg/AP.svg"></ion-icon>
-          </ion-item>
-          <ion-item button color="eublue">
-            <ion-label>Diplomatic</ion-label>
-            <ion-icon src="assets/svg/DP.svg"></ion-icon>
-          </ion-item>
-          <ion-item button color="eured">
-            <ion-label>Military</ion-label>
-            <ion-icon src="assets/svg/MP.svg"></ion-icon>
-          </ion-item>
-        </ion-list>
-      </ng-template>
-    </ion-popover>
+    <app-focus-chip [color]="color" [chipID]="'CastileFocus'" [focus]="focus" (focusChange)="changeFocus($event)"></app-focus-chip>
     <app-bool-chip [color]="color">
       <ion-label>Enemy Inside</ion-label>
     </app-bool-chip>
@@ -74,17 +59,17 @@
     </app-bool-chip>
     <app-counter-chip [color]="color" (change)="changeAdminIdeas($event)">
       <ion-label>2</ion-label>
-      <ion-icon class="horizontal-margin" src="assets/svg/AP.svg"></ion-icon>
+      <ion-icon class="horizontal-margin" src="assets/svg/administrative.svg"></ion-icon>
       <ion-label>Ideas</ion-label>
     </app-counter-chip>
     <app-counter-chip [color]="color" (change)="changeDiploIdeas($event)">
       <ion-label>0</ion-label>
-      <ion-icon class="horizontal-margin" src="assets/svg/DP.svg"></ion-icon>
+      <ion-icon class="horizontal-margin" src="assets/svg/diplomatic.svg"></ion-icon>
       <ion-label>Ideas</ion-label>
     </app-counter-chip>
     <app-counter-chip [color]="color" (change)="changeMilIdeas($event)">
       <ion-label>1</ion-label>
-      <ion-icon class="horizontal-margin" src="assets/svg/MP.svg"></ion-icon>
+      <ion-icon class="horizontal-margin" src="assets/svg/military.svg"></ion-icon>
       <ion-label>Ideas</ion-label>
     </app-counter-chip>
     <app-bool-chip [color]="color">

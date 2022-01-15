@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Bot } from 'src/app/models/bot.model';
 
 @Component({
   selector: 'app-bot-card',
@@ -7,7 +8,25 @@ import { Component } from '@angular/core';
 })
 export class BotCardComponent {
 
+  @Input() bot: Bot
+  @Output() botChange = new EventEmitter<Bot>()
+
   color = "eublue"
+  focus = false
+  availableManpower = false
+
+  changeFocus(newFocus) {
+    console.log(newFocus)
+  }
+
+  // toggleBoolProp(propertyName: string) {
+  //   if (this[propertyName]) this[propertyName] = false
+  //   else this[propertyName] = true
+  // }
+
+  getEUColor() {
+    return 'eu' + this.bot.color
+  }
 
   changeBPLeft(change: number) {
     console.log(change)

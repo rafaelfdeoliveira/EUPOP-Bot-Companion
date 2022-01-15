@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GameService } from '../services/game.service';
 
 @Component({
   selector: 'app-game',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class GamePage {
 
-  constructor() {}
+  constructor(private game: GameService) {}
+
+  changeIA(change: number) {
+    this.game.IA += change
+    console.log(this.game.IA)
+  }
 
 }
