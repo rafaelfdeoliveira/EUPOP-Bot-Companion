@@ -16,10 +16,6 @@ const routes: Routes = [
         loadChildren: () => import('../game/game.module').then(m => m.GamePageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-      },
-      {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full'
