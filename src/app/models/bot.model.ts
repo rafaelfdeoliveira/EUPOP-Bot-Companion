@@ -4,6 +4,7 @@ export class Bot {
     nation: BotNation
     color: EuColor
     religion: Religion
+    difficulty: Difficulty = 'Normal'
     botDeck: BotDeck
     bpLeft = 9
     bpSpent = 0
@@ -44,4 +45,5 @@ export class Bot {
 export type BotNation = 'austria' | 'castile' | 'england' | 'france' | 'muscovy' | 'ottomans' | 'poland' | 'denmark' | 'sweden' | 'portugal' | 'burgundy' | 'aragon' | 'hungary' | 'lithuania' | 'novgorod' | 'mamluks' | 'bohemia' | 'brandenburg' | 'venice' | 'netherlands'
 type EuColor = 'euyellow' | 'eublue' | 'eured' | 'euwhite' | 'eugreen' | 'eupurple'
 type Religion = 'catholic' | 'counter-reformed' | 'protestant' | 'orthodox' | 'muslim'
-type Focus = false | 'economic' | 'administrative' | 'diplomatic' | 'military'
+export type Focus = false | 'economic' | 'administrative' | 'diplomatic' | 'military'
+type Difficulty = 'Easy' | 'Normal' | 'Hard' | 'Very Hard'

@@ -8,11 +8,16 @@ import { GameService } from '../services/game.service';
 })
 export class GamePage {
 
-  constructor(private game: GameService) {}
+  constructor(private gameService: GameService) {
+    if (!this.gameService.game) this.gameService.createNewGame()
+  }
 
-  changeIA(change: number) {
-    this.game.IA += change
-    console.log(this.game.IA)
+  public get age() {
+    return this.gameService.game.age;
+  }
+
+  changeIA(change: -1 | 1) {
+    this.gameService.changeIA(change)
   }
 
 }

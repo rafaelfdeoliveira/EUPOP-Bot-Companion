@@ -8,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class CounterChipComponent {
 
   @Input() color = "tertiary"
-  @Output() change = new EventEmitter<number>()
+  @Output() change = new EventEmitter<-1 | 1>()
 
   isClickOnFirstHalf(ev: MouseEvent) {
     const el = ev.currentTarget as HTMLElement

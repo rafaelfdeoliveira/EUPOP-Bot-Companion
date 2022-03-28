@@ -9,6 +9,7 @@ import { BotCardComponent } from './bot-card/bot-card.component';
 import { CounterChipComponent } from './counter-chip/counter-chip.component';
 import { BoolChipComponent } from './bool-chip/bool-chip.component';
 import { FocusChipComponent } from './focus-chip/focus-chip.component';
+import { AgePipe } from '../pipes/age.pipe';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { FocusChipComponent } from './focus-chip/focus-chip.component';
     BotCardComponent,
     CounterChipComponent,
     BoolChipComponent,
-    FocusChipComponent
+    FocusChipComponent,
+    AgePipe
   ]
 })
 export class GamePageModule {}

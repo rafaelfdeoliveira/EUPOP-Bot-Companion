@@ -21,7 +21,7 @@ export class BoolChipComponent {
   }
 
   getChipStyle() {
-    return `{'backgroundColor': getBackgroundColor(), 'color': 'var(--ion-color-${this.color}-contrast)'}`
+    return {'backgroundColor': this.getBackgroundColor(), 'color': `var(--ion-color-${this.color}-contrast)`}
   }
 
   // [style.backgroundColor]="getBackgroundColor()" style.color="var(--ion-color-{{color}}-contrast)"

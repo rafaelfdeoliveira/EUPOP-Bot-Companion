@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
-import { Focus } from '../game.page';
+import { Focus } from 'src/app/models/bot.model';
 
 @Component({
   selector: 'app-focus-chip',
